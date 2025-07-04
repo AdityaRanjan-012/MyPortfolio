@@ -38,23 +38,23 @@ function App() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application built with MERN stack featuring user authentication, payment integration, and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
+      title: "Easy Medical Service",
+      description: "Developed a MERN stack app to locate nearby hospitals and book ambulances in real time. Used the Haversine formula for geolocation-based hospital search within a defined radius. Built real-time dashboards for users and hospital admins using Socket.io. Integrated OAuth login and designed a responsive emergency booking interface.",
+      tech: ["MERN Stack", "OAuth", "Socket.io", "Geolocation APIs"],
       github: "https://github.com/AdityaRanjan-012",
       live: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
+      title: "College Management System",
+      description: "Designed a user-friendly system to streamline college operations and reduce manual errors. Added user authentication and role-based access control for secure access. Built a real-time notification system for announcements and events. Documented usage guidelines for easy onboarding and maintenance.",
+      tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       github: "https://github.com/AdityaRanjan-012",
       live: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with location-based forecasts, charts, and responsive design for all devices.",
-      tech: ["JavaScript", "API Integration", "Chart.js", "CSS3"],
+      title: "AI Email Classifier",
+      description: "Built an AI model to classify emails using real-time data and APIs. Automated email sorting to improve mailbox management efficiency.",
+      tech: ["HTML", "CSS", "JS", "TensorFlow", "Keras", "Scikit-learn"],
       github: "https://github.com/AdityaRanjan-012",
       live: "#"
     }
@@ -248,23 +248,22 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 border-b border-gray-300 pb-2">Projects</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+              <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 group">
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <div className="text-white text-4xl font-bold">{project.title.charAt(0)}</div>
+                  <div className="text-white text-4xl font-bold drop-shadow-lg group-hover:scale-110 transition-transform duration-300">{project.title.charAt(0)}</div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-300">{project.title}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed" style={{minHeight: '96px'}}>{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                      <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-200 group-hover:bg-blue-50 transition-colors duration-300">
                         {tech}
                       </span>
                     ))}
@@ -274,14 +273,14 @@ function App() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                      className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
                     >
                       <Github size={18} />
                       Code
                     </a>
                     <a
                       href={project.live}
-                      className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                      className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors font-medium"
                     >
                       <ExternalLink size={18} />
                       Live Demo
